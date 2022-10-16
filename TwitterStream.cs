@@ -11,7 +11,7 @@ using Tweetinvi.Streaming.V2;
 
 namespace Twitter
 {
-    public class TwitterStream
+    public class TwitterStream:ITwitter
     {
         private ISampleStreamV2 _internalStream;
         private uint tweetcount=0;
