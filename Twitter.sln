@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32901.82
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twitter", "Twitter.csproj", "{94ED10C0-104A-42C3-AAD4-93CD95C8B59F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Test", "..\Twitter.Test\Twitter.Test.csproj", "{01D52E63-A501-4481-9215-99440AACDA32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Test", "..\Twitter\Twitter.Test\Twitter.Test.csproj", "{01D52E63-A501-4481-9215-99440AACDA32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
