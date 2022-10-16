@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Configuration;
 using System.Diagnostics;
 using System.Threading;
@@ -13,12 +14,15 @@ namespace Twitter
 {
     public class TwitterStream:ITwitter
     {
+        private readonly ILogger<TwitterStream> _logger;
+
         private ISampleStreamV2 _internalStream;
         private uint tweetcount=0;
         private uint lastcount;
         private volatile bool processsstart = true;
-        public TwitterStream()
+        public TwitterStream(ILoggerFactory loggerFactory)
         {
+            _logger = loggerFactory.CreateLogger<TwitterStream>();
             string accessToken = ConfigurationManager.AppSettings["accessToken"];
             string accessTokenSecret = ConfigurationManager.AppSettings["accessTokenSecret"];
             string consumerKey = ConfigurationManager.AppSettings["consumerKey"];
